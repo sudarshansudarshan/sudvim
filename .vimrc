@@ -1,19 +1,20 @@
-"The following 5 line code installs vim-plug if it is not installed.
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-
 call plug#begin('~/.vim/plugged')
-
-" Make sure you use single quotes
-
-" vimtex plugin for latex. 
+Plug 'davidhalter/jedi-vim'
 Plug 'lervag/vimtex'
-Plug 'SerVer/ultisnips'
 
-" Initialize plugin system
+Plug 'sirver/ultisnips'
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"                                            
+let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>" 
+
+"this will change the default directory
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips','~/sudvim/UltiSnips']
+Plug 'ervandew/supertab'
+
 call plug#end()
+
+set number
+set showmode
+
+
