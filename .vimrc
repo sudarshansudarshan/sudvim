@@ -1,12 +1,7 @@
-"do not forget to include alias vim="vim sudvim/.vimrc" in the .bashrc file"
-".vimrc should be placed in ~/sudvim so that you can git the directory
-"
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
+"install curl by issuing the command "sudo apt-get install curl"
+"After that copy paste the following line on your terminal without the quotes:
+"curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.vim/plugged')
 
