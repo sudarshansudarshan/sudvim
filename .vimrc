@@ -1,4 +1,6 @@
-
+"do not forget to include alias vim="vim sudvim/.vimrc" in the .bashrc file"
+".vimrc should be placed in ~/sudvim so that you can git the directory
+"
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
