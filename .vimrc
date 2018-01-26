@@ -15,7 +15,10 @@ let g:UltiSnipsSnippetsDir='~/sudvim/UltiSnips'
 "activated on an empty tex file
 let g:tex_flavor = "latex"
 
+"Plugin syntastic is great for highlighting errors (linting)
+Plug 'vim-syntastic/syntastic'
 
+"Our fav vimtex plugin
 Plug 'lervag/vimtex'
 Plug 'davidhalter/jedi-vim'
 Plug 'lervag/vimtex'
