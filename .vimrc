@@ -15,15 +15,13 @@ let g:UltiSnipsSnippetsDir='~/sudvim/UltiSnips'
 "activated on an empty tex file
 let g:tex_flavor = "latex"
 
-"Plugin syntastic is great for highlighting errors (linting)
 Plug 'vim-syntastic/syntastic'
-
-"Our fav vimtex plugin
 Plug 'lervag/vimtex'
-Plug 'davidhalter/jedi-vim'
 Plug 'lervag/vimtex'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe'
+
 
 
 call plug#end()
@@ -31,3 +29,22 @@ call plug#end()
 set number
 set showmode
 
+
+"This comment was added by SRS Iyengar on 27.01.18"
+"The following code is required for youcompleteme to work with vimlatex. This
+"is the documentation given in the vimtex help file and so I have included the
+"following 4 lines from there.
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+
+"This comment was added by SRS Iyengar on 27.01.18
+"The following 5 lines is to ensure that ycm and UltiSnips work in each
+"other's prsence. I used to face a lot of problems with keybindings without
+"the following 5 lines.
+let g:ycm_key_list_select_completion = ['<C-j>']
+let g:ycm_key_list_previous_completion = ['<C-k>']
+let g:UltiSnipsExpandTrigger="<tab>"                                            
+let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
