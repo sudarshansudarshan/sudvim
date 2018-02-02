@@ -30,6 +30,11 @@ Plug 'Valloric/YouCompleteMe'
 "This is to disable autotrigger
 "let g:ycm_auto_trigger=0
 
+Plug 'jnurmine/Zenburn'
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call plug#end()
 
@@ -55,3 +60,13 @@ let g:ycm_key_list_previous_completion = ['<C-k>']
 let g:UltiSnipsExpandTrigger="<tab>"                                            
 let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+"Below configuration is to ensure that python files are autoindented
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
