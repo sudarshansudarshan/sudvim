@@ -4,6 +4,7 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.vim/plugged')
+Plug 'powerline/powerline'
 
 Plug 'SirVer/ultisnips'
 "below command is required for the UltiSnips default directory to be sudvim
@@ -17,12 +18,23 @@ let g:tex_flavor = "latex"
 
 Plug 'vim-syntastic/syntastic'
 Plug 'lervag/vimtex'
-Plug 'lervag/vimtex'
+"This comment was added by SRS Iyengar on 28.01.18
+"This will enable folding in vimtex. use the command za to toggle
+"folding/unfolding
+let g:vimtex_fold_enabled =1 
+
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
+"This comment was added by SRS Iyengar on 28.01.18
+"This is to disable autotrigger
+"let g:ycm_auto_trigger=0
 
-
+Plug 'jnurmine/Zenburn'
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call plug#end()
 
@@ -48,3 +60,13 @@ let g:ycm_key_list_previous_completion = ['<C-k>']
 let g:UltiSnipsExpandTrigger="<tab>"                                            
 let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+"Below configuration is to ensure that python files are autoindented
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |

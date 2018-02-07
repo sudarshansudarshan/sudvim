@@ -50,9 +50,51 @@ P8:
 
 endsnippet
 
+snippet blueitem "creates a blue font item in enum" b
+\item \textcolor{blue}{$1} 
+$0
+endsnippet
+
+
+
+snippet frac "puts fraction"
+$\frac{$1}{$2}$ $0
+endsnippet
+
+snippet item "Includes \item"
+\item $0
+endsnippet
+
+
+
+snippet sipi "SiPis to write NSPQs - SRSI" b
+%%%%%%%%%%%%%%%%%%%%%%%
+%SiPi-Started `date +%d/%m/%y`%
+%%%%%%%%%%%%%%%%%%%%%%%
+%S1:${1:Idea:} 
+$0
+%S2:${2:Idea:}
+
+%S3:${3:Idea:}
+
+%S4:${4:Idea:}
+
+%S5:${5:Idea:}
+
+%S6:${6:Idea:}
+
+%S7:${7:Idea:}
+
+%S8:${8:Idea:}
+
+%S9:${9:Idea:}
+%%%%%%%%%%%%%%%%%%%%%
+%SiPi-Ended `date +%d/%m/%y`%
+%%%%%%%%%%%%%%%%%%%%%
+endsnippet 
 
 snippet it
-{\it $1 } $0
+{\it $1} $0
 endsnippet
 
 snippet start
