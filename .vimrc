@@ -4,6 +4,9 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.vim/plugged')
+"following is a dictionary Plugin"
+Plug 'itchyny/dictionary.vim'
+
 Plug 'powerline/powerline'
 
 Plug 'SirVer/ultisnips'
@@ -70,3 +73,6 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+
+"Use \d on top of a word to look it up in Dictionary.app
+nmap <silent> <Leader>d :!open dict://<cword><CR><CR>
