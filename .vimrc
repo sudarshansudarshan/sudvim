@@ -4,8 +4,6 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.vim/plugged')
-"following is a dictionary Plugin"
-Plug 'itchyny/dictionary.vim'
 
 Plug 'powerline/powerline'
 
