@@ -75,3 +75,7 @@ au BufNewFile,BufRead *.py
 "Use \d on top of a word to look it up in Dictionary.app
 "Uncomment the following for it to work. Note that it works only in Mac.
 "nmap <silent> <Leader>d :!open dict://<cword><CR><CR>
+"
+"following maps gn to - move to next line moving the rest of the text
+"to the next line
+map gn i<CR><ESC>
