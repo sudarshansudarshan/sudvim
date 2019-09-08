@@ -47,6 +47,13 @@ Plug 'Valloric/YouCompleteMe'
 "This comment was added by SRS Iyengar on 28.01.18
 "This is to disable autotrigger
 "let g:ycm_auto_trigger=0
+"YouCompleteMe seems to be giving server problems the moment we start vim. The 
+"error appears in the status below. I tried a lot to fix this but couldn't.
+"Finally realised that it is important for me to make a note of the
+"troubleshooting steps, so including it as a comment here:
+"1) First, ensure you have macvim and not just vim.
+"2) Secondly, go to the directory where youcompleteme is present and run the
+"command ./install.py and you will see that the problem gets fixed. 
 
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
