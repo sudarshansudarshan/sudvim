@@ -4,10 +4,13 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.vim/plugged')
-
+Plug 'davidhalter/jedi-vim'
 Plug 'powerline/powerline'
-
+"Plug 'klen/python-mode'"
 Plug 'SirVer/ultisnips'
+
+
+
 "below command is required for the UltiSnips default directory to be sudvim
 set runtimepath+=~/sudvim/
 "below command tells us to open a file from sudvim/UltiSnips directory when
@@ -18,6 +21,20 @@ let g:UltiSnipsSnippetsDir='~/sudvim/UltiSnips'
 let g:tex_flavor = "latex"
 
 Plug 'vim-syntastic/syntastic'
+"This comment was added by SRS Iyengar on 8th September 2019"
+"This will ensure that the syntastic checkers are on"
+"If we dont do this, :SyntasticInfo will show that no checkers are enabled"
+"I am directly copy pasting the content from the syntastic github homepage.
+"There is an FAQ there talking about this"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 Plug 'lervag/vimtex'
 "This comment was added by SRS Iyengar on 28.01.18
 "This will enable folding in vimtex. use the command za to toggle
