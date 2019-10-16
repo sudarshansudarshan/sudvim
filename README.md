@@ -13,3 +13,6 @@ cd .vim/plugged/YouCompleteMe
 
 after this run ./install.py
 
+Use following command if cmake error is shown
+
+sudo apt install build-essential cmake python3-dev
