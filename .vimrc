@@ -1,4 +1,10 @@
-"install curl by issuing the command "sudo apt-get install curl"
+"install the right verison of vim by going through the following answer
+"https://stackoverflow.com/questions/56699336/how-do-i-install-vim-on-osx-with-python-3-support
+
+
+
+"install curl by issuing the command "sudo apt-get install curl" or use brew
+"command if you are on mac.
 "After that copy paste the following line on your terminal without the quotes:
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
