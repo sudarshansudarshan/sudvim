@@ -103,3 +103,9 @@ au BufNewFile,BufRead *.py
 "following maps gn to - move to next line moving the rest of the text
 "to the next line
 map gn i<CR><ESC>
+
+
+"The following line is for syntastic to use python3 instead of python
+"ref: https://stackoverflow.com/questions/23177561/switch-python-version-for-vim-syntastic
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['python']
