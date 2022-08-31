@@ -1,4 +1,4 @@
-"install the right verison of vim by going through the following answer
+"install the right versionof vim by going through the following answer
 "https://stackoverflow.com/questions/56699336/how-do-i-install-vim-on-osx-with-python-3-support
 
 
@@ -9,9 +9,41 @@
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+colorscheme desert
+autocmd vimenter *.md Goyo
+
 call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+
+Plug 'junegunn/goyo.vim'
+
+
+Plug 'junegunn/limelight.vim'
+"Folowing two lets is to ensure that the hightlight is on line basis and not
+"paragraph basis.
+let g:limelight_bop = '^'
+let g:limelight_eop = '$'
+
+Plug 'junegunn/fzf'
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+"Plug 'godlygeek/tabular'
+"Plug 'preservim/vim-markdown'
+
+"Plug 'JamshedVesuna/vim-markdown-preview'
+"let vim_markdown_preview_browser='Google Chrome'
+"let vim_markdown_preview_github=1
 
 Plug 'vim-syntastic/syntastic'
+
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
 "The above two line is a recent addition, to ensure that it is python3 and not
@@ -31,7 +63,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-
+Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 
 call plug#end()
@@ -59,3 +91,12 @@ map gn i<CR><ESC>
 
 
 set belloff=all
+
+syntax on
+set autoindent
+set tabstop=4
+set number
+set showmode
+
+imap jj <esc>
+
