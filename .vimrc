@@ -8,9 +8,9 @@
 "After that copy paste the following line on your terminal without the quotes:
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 colorscheme desert
 autocmd vimenter *.md Goyo
+autocmd VimEnter * Limelight
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
