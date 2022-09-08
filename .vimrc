@@ -66,6 +66,10 @@ let g:syntastic_check_on_wq = 0
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 
+Plug '907th/vim-auto-save'
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
+
 call plug#end()
 
 set number
