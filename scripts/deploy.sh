@@ -18,7 +18,6 @@ git clone https://github.com/sudarshansudarshan/plakshamath
 git clone https://github.com/sudarshansudarshan/codershigh
 git clone https://github.com/sudarshansudarshan/sudarshansudarshan.github.io
 git clone https://github.com/sudarshansudarshan/btp_kdap
-git clone https://github.com/sudarshansudarshan/personal
 git clone https://github.com/sudarshansudarshan/sudvim
 git clone https://github.com/sudarshansudarshan/underthetree
 git clone https://github.com/sudarshansudarshan/gurukul

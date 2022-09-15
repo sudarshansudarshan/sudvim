@@ -13,6 +13,9 @@ autocmd vimenter *.md Goyo
 autocmd VimEnter * Limelight
 
 call plug#begin('~/.vim/plugged')
+
+Plug 'lervag/vimtex'
+
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 
