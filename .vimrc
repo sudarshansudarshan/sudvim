@@ -1,6 +1,9 @@
 "install the right versionof vim by going through the following answer
 "https://stackoverflow.com/questions/56699336/how-do-i-install-vim-on-osx-with-python-3-support
 
+"If the above doesn't work, try: https://stackoverflow.com/questions/69914503/installing-vim-with-python3-support
+"The idea is to install vim by using brew, this will install vim with python3 support. 
+
 
 
 "install curl by issuing the command "sudo apt-get install curl" or use brew
