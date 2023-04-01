@@ -1,8 +1,6 @@
+
 "install the right versionof vim by going through the following answer
 "https://stackoverflow.com/questions/56699336/how-do-i-install-vim-on-osx-with-python-3-support
-
-"If the above doesn't work, try: https://stackoverflow.com/questions/69914503/installing-vim-with-python3-support
-"The idea is to install vim by using brew, this will install vim with python3 support. 
 
 
 
@@ -12,8 +10,6 @@
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 colorscheme desert
-"autocmd vimenter *.md Goyo
-autocmd VimEnter * Limelight
 
 call plug#begin('~/.vim/plugged')
 
@@ -51,7 +47,7 @@ let g:limelight_conceal_guifg = '#777777'
 "let vim_markdown_preview_browser='Google Chrome'
 "let vim_markdown_preview_github=1
 
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
@@ -116,3 +112,30 @@ set showmode
 
 imap jj <esc>
 
+"The following code helps you quit Goyo mode with only a single :q otherwise
+"you need to do it twice.
+"Begin
+function! s:goyo_enter()
+  let b:quitting = 0
+  let b:quitting_bang = 0
+  autocmd QuitPre <buffer> let b:quitting = 1
+  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+endfunction
+
+function! s:goyo_leave()
+  " Quit Vim if this is the only remaining buffer
+  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    if b:quitting_bang
+      qa!
+    else
+      qa
+    endif
+  endif
+endfunction
+
+autocmd! User GoyoEnter call <SID>goyo_enter()
+autocmd! User GoyoLeave call <SID>goyo_leave()
+autocmd vimenter * Goyo
+"The following code helps you quit Goyo mode with only a single :q otherwise
+"you need to do it twice.
+"End
