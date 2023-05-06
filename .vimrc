@@ -14,6 +14,14 @@ colorscheme desert
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
+syntax enable
+let g:vimtex_compiler_method = 'latexrun'
+
+let g:vimtex_view_method = 'skim'
+let g:vimtex_view_general_viewer
+      \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+let g:vimtex_view_general_options = '-r @line @pdf @tex'
+let g:vimtex_compiler_latexmk = {'continuous': 1}
 
 
 
