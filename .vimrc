@@ -144,6 +144,15 @@ endfunction
 autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
 autocmd vimenter * Goyo
+
+"copilot keybindings
+"ALT-]
+inoremap ‘ <Plug>(copilot-next)
+"ALT-[
+inoremap “ <Plug>(copilot-previous)
+"ALT-\
+inoremap « <Plug>(copilot-suggest)
+
 "The following code helps you quit Goyo mode with only a single :q otherwise
 "you need to do it twice.
 "End
