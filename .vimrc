@@ -11,7 +11,13 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 "below mapping is to fix the problem with copilot suggestion cycling. 
-nmap <M-]> <D-]>
+"copilot keybindings
+"ALT-]
+inoremap ‘ <Plug>(copilot-next)
+"ALT-[
+inoremap “ <Plug>(copilot-previous)
+"ALT-\
+inoremap « <Plug>(copilot-suggest)
 
 colorscheme desert
 
