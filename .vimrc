@@ -9,7 +9,10 @@
 "After that copy paste the following line on your terminal without the quotes:
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+"below mapping is to fix the problem with copilot suggestion cycling. 
 nmap <M-]> <D-]>
+
 colorscheme desert
 
 call plug#begin('~/.vim/plugged')
