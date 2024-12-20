@@ -2,6 +2,12 @@
 "install the right versionof vim by going through the following answer
 "https://stackoverflow.com/questions/56699336/how-do-i-install-vim-on-osx-with-python-3-support
 
+"The above stackoverflow link can be a little confusing. Use chatgpt:
+"brew install macvim
+"Type the following two commands and you are done:
+"echo 'export PATH="/usr/local/opt/macvim/bin:$PATH"' >> ~/.zshrc
+"source ~/.zshrc
+
 
 
 "install curl by issuing the command "sudo apt-get install curl" or use brew
