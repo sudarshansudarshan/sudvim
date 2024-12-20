@@ -29,6 +29,9 @@ colorscheme desert
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'github/copilot.vim'
+
+
 Plug 'lervag/vimtex'
 syntax enable
 let g:vimtex_compiler_method = 'latexrun'
